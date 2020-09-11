@@ -13,7 +13,9 @@ export function webpack(config: Configuration) {
         {
           test: /\.vue$/,
           loader: 'vue-loader',
-          options: {},
+          options: {
+            babelParserPlugins: ['jsx', 'classProperties', 'decorators-legacy'],
+          },
         },
         {
           test: /\.tsx?$/,
